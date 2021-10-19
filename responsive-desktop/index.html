@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frostcrag Spire Clock</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">  
+</head>
+<body>
+     <!-- Music & Sound -->
+     <audio id="music" autoplay="autoplay" loop>
+        <source src="jeremy-soule-secunda.mp3"> 
+    </audio>
+    <audio id="wind" autoplay="autoplay" loop>
+        <source src="howling-wind.mp3">
+    </audio>
+    <script>
+        var audio = document.getElementById("wind");
+        audio.volume = 0.2;
+        var audio = document.getElementById("music");
+        audio.volume = 1;
+    </script>
+    
+        <!-- Looping Video -->
+    <div id="video-container">
+        <video id="frostcrag" autoplay="autoplay" loop>
+            <source src="looping-video.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <!-- Page Content -->
+    <div id="display-wrapper">
+        <div id="time-weather-container">
+            <div id="clock-content">
+                <h1 class="date">Sundas, Evening Star, 4E 201</h1>
+                <h1 class="time">1:04 a.m.</h1>
+            </div>
+            <img id="weather-icon" src="snowy-6.svg">
+        </div>
+        <div class="line"></div>
+
+        <div id="forecast">
+            <div class="row1">
+                <p class="forecast-font">Later:</p> <img class="forecast-img" src="snowy-1.svg"> 
+            </div>
+            <div class="row2">
+                <p class="forecast-font">Morndas:</p> <img class="forecast-img" src="thunder.svg">
+            </div>
+            <div class="row3">
+                <p class="forecast-font">Tirdas:</p> <img class="forecast-img" src="cloudy.svg">
+            </div>
+            <div class="row4">
+                <p class="forecast-font">Middas:</p> <img class="forecast-img" src="snowy-6.svg">
+            </div>
+            <div class="row5">
+                <p class="forecast-font">Turdas:</p> <img class="forecast-img" src="day.svg">
+            </div>
+            <div class="row6">
+                <p class="forecast-font">Fredas:</p> <img class="forecast-img" src="rainy-7.svg">
+            </div>
+        </div>
+
+        <div id="app-container">
+            <Button type="submit" name="learn" value="myimage"><img class="apps games" src="icons8-games-folder-64.png"> <p class="app-text">Games</p></Button>
+            <div class="games-box">
+                <div class="games-row1"><img class="app-icons" src="morrowind.png"><p class="app-text">Morrowind</p> </div>
+               
+            </div>
+            <Button type="submit" name="learn" value="myimage"><img class="apps programs" src="icons8-services-64.png"> <p class="app-text">Programs</p></Button>
+            <div class="programs-box">
+            </div>
+            <Button type="submit" name="learn" value="myimage"><img class="apps socials" src="icons8-ok-64.png"> <p class="app-text">Socials</p></Button>
+            <div class="socials-box">
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

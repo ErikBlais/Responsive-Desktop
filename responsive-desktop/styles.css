@@ -1,0 +1,1004 @@
+*{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+:root{
+    --base-font-size: 16px;
+    --titles-font-size: 18px;
+    --weather-font-size: 75px;
+    --caption-font-size: 11px;
+    --padding-sm: 4px;
+    --padding-md: 6px;
+    --padding-lg: 8px;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+#video-container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+}
+
+#display-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+#frostcrag{
+    object-fit: container;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    transform: translate(-40%,-40%);
+}
+
+#clock-content{
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 380px;
+    height: 140px;
+    top: 35%;
+    left: 75%;
+    position: fixed;
+    margin-top: -200px;
+    margin-left: -265px;
+}
+
+h1{
+    text-shadow: 0 0 15px #FF0000, 0 0 15px #0000FF;
+}
+
+.time{
+    font-family: 'IM Fell English', serif;
+    margin: 0;
+    font-size: var(--weather-font-size);
+}
+
+.date{
+    font-family: 'IM Fell English', serif;
+    margin: 0;
+    font-size: var(--titles-font-size);
+    margin: 0 5px 0 5px;
+    
+}
+
+#weather-icon{
+    width: 250px;
+    height: 250px;
+    top: 45%;
+    left: 95%;
+    position: fixed;
+    margin-top: -200px;
+    margin-left: -265px;
+}
+
+.line{
+    padding: 1rem;
+    border-bottom: 2px solid indigo;
+    width: 255px;
+    top: 45%;
+    left: 10%;
+    position: fixed;
+}
+
+#forecast{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 15px;
+    width: 250px;
+    height: 390px;
+    top: 49%;
+    left: 11%;
+    position: fixed;
+}
+
+.row1, .row2, .row3, .row4, .row5, .row6{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forecast-font{
+    font-family: 'IM Fell English', serif;
+    color: white;
+    margin: 0;
+}
+
+
+
+#app-container{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 380px;
+    height: 140px;
+    top: 107%;
+    left: 77%;
+    margin-top: -200px;
+    margin-left: -265px;
+  
+}
+
+
+button{
+
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: transparent 0px;
+    width: fit-content;
+}
+
+.apps{
+    width: 70px;
+}
+
+.app-text{
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-family: 'IM Fell English', serif;
+}
+
+.games-row1{
+    display: none;
+}
+
+
+
+
+/* Mobile Displays */
+@media screen and (min-width: 375px){
+    #clock-content{
+        color: #f1f1f1;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 380px;
+        height: 140px;
+        top: 35%;
+        left: 70%;
+        position: fixed;
+        margin-top: -200px;
+        margin-left: -265px;
+    }
+
+    #weather-icon{
+        width: 250px;
+        height: 250px;
+        top: 43%;
+        left: 87%;
+        position: fixed;
+        margin-top: -200px;
+        margin-left: -265px;
+    }
+
+    #app-container{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 400px;
+        height: 140px;
+        top: 107%;
+        left: 80%;
+        margin-top: -200px;
+        margin-left: -293px;
+    }
+
+    .line{
+        padding: 1rem;
+        border-bottom: 2px solid indigo;
+        width: 300px;
+        top: 42%;
+        left: 10%;
+        position: fixed;
+    }
+    
+    #forecast{
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-left: 15px;
+        width: 285px;
+        height: 390px;
+        top: 46%;
+        left: 13%;
+        position: fixed;
+    }
+
+    .games-row1{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 425px){
+    #clock-content{
+        color: #f1f1f1;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 380px;
+        height: 140px;
+        top: 35%;
+        left: 68%;
+        position: fixed;
+        margin-top: -200px;
+        margin-left: -265px;
+    }
+
+    #weather-icon{
+        width: 250px;
+        height: 250px;
+        top: 42%;
+        left: 82%;
+        position: fixed;
+        margin-top: -200px;
+        margin-left: -265px;
+    }
+
+    #app-container{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 468px;
+        height: 140px;
+        top: 107%;
+        left: 83%;
+        margin-top: -200px;
+        margin-left: -348px;
+    }
+
+    .line{
+        padding: 1rem;
+        border-bottom: 2px solid indigo;
+        width: 350px;
+        top: 42%;
+        left: 10%;
+        position: fixed;
+    }
+    
+    #forecast{
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-left: 15px;
+        width: 285px;
+        height: 390px;
+        top: 46%;
+        left: 20%;
+        position: fixed;
+    }
+
+    .games-row1{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 568px){
+    #clock-content{
+        color: #f1f1f1;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 500px;
+        height: 250px;
+        top: 29%;
+        left: 55%;
+        position: fixed;
+        margin-top: -200px;
+        margin-left: -265px;
+    }
+
+    .time{
+        font-family: 'IM Fell English', serif;
+        margin: 0;
+        font-size: 100px;
+    }
+    
+    .date{
+        font-family: 'IM Fell English', serif;
+        margin: 0;
+        font-size: 20px;
+        margin: 0 5px 0 5px;
+        
+    }
+
+    #weather-icon{
+        width: 300px;
+        height: 300px;
+        top: 40%;
+        left: 70%;
+        position: fixed;
+        margin-top: -200px;
+        margin-left: -265px;
+    }
+
+    #app-container{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 650px;
+        height: 140px;
+        top: 107%;
+        left: 87%;
+        margin-top: -200px;
+        margin-left: -500px;
+    }
+
+    .line{
+        padding: 1rem;
+        border-bottom: 2px solid indigo;
+        width: 475px;
+        top: 43%;
+        left: 10%;
+        position: fixed;
+    }
+    
+    #forecast{
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-left: 15px;
+        width: 455px;
+        height: 390px;
+        top: 47%;
+        left: 12%;
+        position: fixed;
+    }
+
+    .games-row1{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px){
+    #clock-content{
+        color: #f1f1f1;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 500px;
+        height: 250px;
+        top: 30%;
+        left: 53%;
+        position: fixed;
+        margin-top: -200px;
+        margin-left: -265px;
+    }
+
+    .time{
+        font-family: 'IM Fell English', serif;
+        margin: 0;
+        font-size: 100px;
+    }
+    
+    .date{
+        font-family: 'IM Fell English', serif;
+        margin: 0;
+        font-size: 20px;
+        margin: 0 5px 0 5px;
+    }
+
+    #weather-icon{
+        width: 300px;
+        height: 300px;
+        top: 43%;
+        left: 65%;
+        position: fixed;
+        margin-top: -200px;
+        margin-left: -265px;
+    }
+
+    #app-container{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 800px;
+        height: 125px;
+        top: 107%;
+        left: 80%;
+        margin-top: -200px;
+        margin-left: -575px;
+    }
+
+    .apps{
+        width: 95px;
+    }
+    
+    .app-text{
+        margin: 0;
+        text-align: center;
+        color: white;
+        font-family: 'IM Fell English', serif;
+    }
+
+    .line{
+        padding: 1rem;
+        border-bottom: 2px solid indigo;
+        width: 600px;
+        top: 46%;
+        left: 10%;
+        position: fixed;
+    }
+    
+    #forecast{
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-left: 15px;
+        width: 550px;
+        height: 390px;
+        top: 50%;
+        left: 15%;
+        position: fixed;
+    }
+
+    .games-row1{
+        display: none;
+    }
+}
+
+/* Laptop/Desktop Displays */
+@media screen and (min-width: 1024px){
+    #display-wrapper{
+        display: flex;
+        flex-direction: row;
+         
+    }
+
+    #clock-content{
+        color: #f1f1f1;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: ;
+        align-items: ;
+        flex-wrap: ;
+        width: 500px;
+        height: 250px;
+        top: 30%;
+        left: 23%;
+        position: fixed;
+        margin-top: -200px;
+        margin-left: -265px;
+    }
+
+    .time{
+        font-family: 'IM Fell English', serif;
+        margin: 0;
+        font-size: 100px;
+    }
+    
+    .date{
+        font-family: 'IM Fell English', serif;
+        margin: 0;
+        font-size: 20px;
+        margin: 0 5px 0 5px;
+    }
+
+    button{
+        justify-content: center;
+        align-content: center;
+        background-color: transparent;
+        padding: 0;
+        margin-left: ;
+        border: transparent 0px;
+        width: ;
+        
+    }
+
+    #weather-icon{
+        width: 300px;
+        height: 300px;
+        top: 41%;
+        left: 32%;
+        position: fixed;
+    }
+
+    #app-container{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        height: 950px;
+        top: 20%;
+        left: 105%;
+        margin-top: -200px;
+        margin-left: -575px;
+    }
+
+    .app-icons{
+        display: flex;
+        width: 60px;
+        justify-content: center;
+    }
+
+    .games-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        background: rgba(0, 0, 0, 0.5);
+        border: solid 2px indigo;
+        width: 100%;
+    }
+
+    .games-row1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+
+    .programs-box{
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20rem 0 0rem 20rem;
+        border: solid 2px indigo;
+    }
+
+    .socials-box{
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10rem 0 0 10rem;
+        border: solid 2px indigo;
+    }
+
+    .apps{
+        width: 75px;
+    }
+    
+    .app-text{
+        margin: 0;
+        text-align: center;
+        color: white;
+        font-family: 'IM Fell English', serif;
+    }
+
+    .line{
+        padding: 1rem;
+        border-bottom: 2px solid indigo;
+        width: 400px;
+        top: 45%;
+        left: 3%;
+        position: fixed;
+    }
+    
+    #forecast{
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-left: 15px;
+        width: 380px;
+        height: 390px;
+        top: 50%;
+        left: 4%;
+        position: fixed;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    #display-wrapper{
+        display: flex;
+        flex-direction: row;
+         
+    }
+
+    #clock-content{
+        color: #f1f1f1;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 500px;
+        height: 250px;
+        top: 30%;
+        left: 20%;
+        position: fixed;
+        margin-top: -200px;
+        margin-left: -265px;
+    }
+
+    .time{
+        font-family: 'IM Fell English', serif;
+        margin: 0;
+        font-size: 100px;
+    }
+    
+    .date{
+        font-family: 'IM Fell English', serif;
+        margin: 0;
+        font-size: 20px;
+        margin: 0 5px 0 5px;
+    }
+
+    #weather-icon{
+        width: 300px;
+        height: 300px;
+        top: 41%;
+        left: 26%;
+        position: fixed;
+    }
+
+    #app-container{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 500px;
+        height: 950px;
+        top: 20%;
+        left: 100%;
+        margin-top: -200px;
+        margin-left: -575px;
+    }
+
+    .games-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5rem 0 0 5rem;
+        border: solid 2px indigo;
+    }
+
+    .programs-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20rem 0 0rem 20rem;
+        border: solid 2px indigo;
+    }
+
+    .socials-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10rem 0 0 10rem;
+        border: solid 2px indigo;
+    }
+
+    .apps{
+        width: 75px;
+    }
+    
+    .app-text{
+        margin: 0;
+        text-align: center;
+        color: white;
+        font-family: 'IM Fell English', serif;
+    }
+
+    .line{
+        padding: 1rem;
+        border-bottom: 2px solid indigo;
+        width: 450px;
+        top: 44%;
+        left: 3%;
+        position: fixed;
+    }
+    
+    #forecast{
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-left: 15px;
+        width: 425px;
+        height: 390px;
+        top: 48%;
+        left: 4%;
+        position: fixed;
+    }
+}
+
+@media screen and (min-width: 1920px){
+    #video-container{
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%; 
+        overflow: hidden;
+    }
+
+    #frostcrag{
+        object-fit: fill;
+        min-width: 100%; 
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        position: ;
+        top: 40%;
+        left: 40%;
+        transform: translate(-40%,-40%);
+    }
+
+    #display-wrapper{
+        display: flex;
+        flex-direction: row;
+         
+    }
+
+    #clock-content{
+        color: #f1f1f1;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 500px;
+        height: 250px;
+        top: 27%;
+        left: 20%;
+        position: fixed;
+        margin-top: -200px;
+        margin-left: -265px;
+    }
+
+    h1{
+        text-shadow: 0 0 20px #FF0000, 0 0 20px #0000FF;
+    }
+
+    .time{
+        font-family: 'IM Fell English', serif;
+        margin: 0;
+        font-size: 125px;
+    }
+    
+    .date{
+        font-family: 'IM Fell English', serif;
+        margin: 0;
+        font-size: 23px;
+        margin: 0 5px 0 5px;
+    }
+
+    #weather-icon{
+        width: 350px;
+        height: 350px;
+        top: 39%;
+        left: 24%;
+        position: fixed;
+    }
+
+    #app-container{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 500px;
+        height: 950px;
+        top: 20%;
+        left: 100%;
+        margin-top: -200px;
+        margin-left: -575px;
+    }
+
+    .games-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5rem 0 0 5rem;
+        border: solid 2px indigo;
+    }
+
+    .programs-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20rem 0 0rem 20rem;
+        border: solid 2px indigo;
+    }
+
+    .socials-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10rem 0 0 10rem;
+        border: solid 2px indigo;
+    }
+
+    .apps{
+        width: 80px;
+    }
+    
+    .app-text{
+        margin: 0;
+        text-align: center;
+        color: white;
+        font-family: 'IM Fell English', serif;
+        font-size: 17px;
+    }
+
+    .line{
+        padding: 1rem;
+        border-bottom: 2px solid indigo;
+        width: 600px;
+        top: 46%;
+        left: 3%;
+        position: fixed;
+    }
+    
+    #forecast{
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-left: 15px;
+        width: 565px;
+        height: 390px;
+        top: 50%;
+        left: 4%;
+        position: fixed;
+    }
+
+    .forecast-font{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 2560px){
+    #video-container{
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%; 
+        overflow: hidden;
+    }
+
+    #frostcrag{
+        object-fit: fill;
+        min-width: 100%; 
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        position: ;
+        top: 40%;
+        left: 40%;
+        transform: translate(-40%,-40%);
+    }
+
+    #display-wrapper{
+        display: flex;
+        flex-direction: row;
+         
+    }
+
+    #clock-content{
+        color: #f1f1f1;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 500px;
+        height: 250px;
+        top: 25%;
+        left: 20%;
+        position: fixed;
+        margin-top: -200px;
+        margin-left: -265px;
+    }
+
+    h1{
+        text-shadow: 0 0 20px #FF0000, 0 0 20px #0000FF;
+    }
+
+    .time{
+        font-family: 'IM Fell English', serif;
+        margin: 0;
+        font-size: 125px;
+    }
+    
+    .date{
+        font-family: 'IM Fell English', serif;
+        margin: 0;
+        font-size: 23px;
+        margin: 0 5px 0 5px;
+    }
+
+    #weather-icon{
+        width: 350px;
+        height: 350px;
+        top: 37%;
+        left: 23%;
+        position: fixed;
+    }
+
+    #app-container{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 500px;
+        height: 950px;
+        top: 20%;
+        left: 100%;
+        margin-top: -200px;
+        margin-left: -590px;
+    }
+
+    .games-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5rem 0 0 5rem;
+        border: solid 2px indigo;
+    }
+
+    .programs-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20rem 0 0rem 20rem;
+        border: solid 2px indigo;
+    }
+
+    .socials-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10rem 0 0 10rem;
+        border: solid 2px indigo;
+    }
+
+    .apps{
+        width: 80px;
+    }
+    
+    .app-text{
+        margin: 0;
+        text-align: center;
+        color: white;
+        font-family: 'IM Fell English', serif;
+        font-size: 17px;
+    }
+
+    .line{
+        padding: 1rem;
+        border-bottom: 2px solid indigo;
+        width: 750px;
+        top: 46%;
+        left: 5%;
+        position: fixed;
+    }
+    
+    #forecast{
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-left: 15px;
+        width: 715px;
+        height: 390px;
+        top: 50%;
+        left: 6%;
+        position: fixed;
+    }
+
+    .forecast-font{
+        font-size: 23px;
+    }
+}
